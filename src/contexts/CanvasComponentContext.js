@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { GenerateKey } from '../components/Tools';
+import { GenerateKey } from "../components/Tools";
 
 const defaults = {
-
   components: [
     {
       banner: "Angle",
@@ -13,18 +12,18 @@ const defaults = {
       max: 20,
       location: "undecided-menu",
       key: GenerateKey(),
-      style: "slider"
+      style: "slider",
     },
     {
       banner: "Stroke Length",
       id: "strokeLength",
-      value: 150,
+      value: 250,
       increment: 5,
       min: 0,
       max: 300,
       key: GenerateKey(),
       location: "left-menu",
-      style: "spinner"
+      style: "spinner",
     },
     {
       banner: "Stroke Width",
@@ -35,7 +34,7 @@ const defaults = {
       max: 25,
       key: GenerateKey(),
       location: "left-menu",
-      style: "spinner"
+      style: "spinner",
     },
     {
       banner: "Stroke Rotation",
@@ -46,7 +45,7 @@ const defaults = {
       max: 2000,
       key: GenerateKey(),
       location: "left-menu",
-      style: "spinner"
+      style: "spinner",
     },
     {
       banner: "Exit Recursion",
@@ -58,7 +57,7 @@ const defaults = {
       max: 25,
       key: GenerateKey(),
       location: "left-menu",
-      style: "spinner"
+      style: "spinner",
     },
     {
       banner: "Branch Density L",
@@ -69,7 +68,7 @@ const defaults = {
       max: 1.5,
       key: GenerateKey(),
       location: "left-menu",
-      style: "spinner"
+      style: "spinner",
     },
     {
       banner: "Branch Density R",
@@ -81,7 +80,7 @@ const defaults = {
       max: 1.5,
       key: GenerateKey(),
       location: "left-menu",
-      style: "spinner"
+      style: "spinner",
     },
     {
       banner: "Branch Angle L ",
@@ -94,7 +93,7 @@ const defaults = {
       max: 100,
       key: GenerateKey(),
       location: "right-menu",
-      style: "spinner"
+      style: "spinner",
     },
     {
       banner: "Branch Angle R",
@@ -106,34 +105,27 @@ const defaults = {
       max: 0,
       key: GenerateKey(),
       location: "right-menu",
-      style: "spinner"
+      style: "spinner",
     },
     {
       banner: "Opacity",
       id: "opacity",
-      value: 0.2,
+      value: 0.7,
       increment: 0.025,
       min: 0,
       max: 1,
       key: GenerateKey(),
       location: "right-menu",
-      style: "spinner"
+      style: "spinner",
     },
     {
       banner: "Stroke Color",
       id: "strokeColor",
-      value: '#000',
+      value: "#000",
       key: GenerateKey(),
       location: "right-menu",
       style: "color",
-      colors: [
-        "#FFF",
-        "#000",
-        "#F0F",
-        "#0F0",
-        "#00F",
-        "#F00"
-      ]
+      colors: ["#FFF", "#000", "#F0F", "#0F0", "#00F", "#F00"],
     },
     {
       banner: "Fill Style",
@@ -142,7 +134,7 @@ const defaults = {
       key: GenerateKey(),
       type: "color",
       location: "right-menu",
-      style: "color"
+      style: "color",
     },
     {
       banner: "Shadow Blur",
@@ -154,7 +146,7 @@ const defaults = {
       max: 1,
       key: GenerateKey(),
       location: "undecided-menu",
-      style: "spinner"
+      style: "spinner",
     },
     {
       banner: "Shadow Color",
@@ -162,12 +154,12 @@ const defaults = {
       value: "(rgba(0,0,0,0.8))",
       key: GenerateKey(),
       location: "right-menu",
-      style: "color"
+      style: "color",
     },
     {
       banner: "Adjust Y Axis",
       id: "adjustCanvasY",
-      value: 1,
+      value: 0.7,
       initValue: 1,
       increment: 0.1,
       min: 1,
@@ -175,46 +167,49 @@ const defaults = {
       key: GenerateKey(),
       type: "canvas",
       location: "right-menu",
-      style: "slider"
+      style: "slider",
     },
     {
       banner: "Adjust X Axis",
       id: "adjustCanvasX",
-      value: 2,
+      value: 1.4,
       increment: 0.1,
       min: 0,
       max: 3,
       key: GenerateKey(),
       type: "canvas",
       location: "left-menu",
-      style: "slider"
+      style: "slider",
     },
-  ]
-}
- //console.log(defaults.components[6].value);
+  ],
+};
+//console.log(defaults.components[6].value);
 export const ComponentContext = React.createContext({
   components: [],
-  updateComponent: () => {}
+  updateComponent: () => {},
 });
 
 export const ComponentContextProvider = (props) => {
-
   const updateComponent = (id, increment) => {
     let localComponents = state.components;
 
-    localComponents.forEach(c => {
+    localComponents.forEach((c) => {
       if (c.id === id) {
-        if((increment < 0 && c.value > c.min) || (increment > 0 && c.value < c.max)) {
-           c.value += increment
-      }}
+        if (
+          (increment < 0 && c.value > c.min) ||
+          (increment > 0 && c.value < c.max)
+        ) {
+          c.value += increment;
+        }
+      }
     });
-    setState({...state, components: localComponents})
-  }
+    setState({ ...state, components: localComponents });
+  };
 
   const initState = {
     components: defaults.components,
-    updateComponent: updateComponent
-  }
+    updateComponent: updateComponent,
+  };
 
   const [state, setState] = useState(initState);
 
@@ -222,5 +217,5 @@ export const ComponentContextProvider = (props) => {
     <ComponentContext.Provider value={state}>
       {props.children}
     </ComponentContext.Provider>
-  )
-}
+  );
+};
