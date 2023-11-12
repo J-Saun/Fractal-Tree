@@ -88,4 +88,4 @@ No License
 
 <br><br>
 
-## Leave a :star2:
+## If you _*Like*_ leave a :star2:
