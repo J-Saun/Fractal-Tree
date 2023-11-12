@@ -3,7 +3,7 @@
 <img src="public\fern.jpg" alt="logo" width=900 height=400 />
 
 Image credit: [Deepak Nautiyal](https://unsplash.com/@deepaknautiyal) - [Unsplash](https://unsplash.com/)
-<br>
+<br><br>
 
 <h1>Fractal Tree</h1>
 <p>This project was my introduction to React. It starts by drawing on an HTML canvas (centered at the bottom) based on parameters passed from components in sidebars. The line drawn will split when it reaches a certain length, and a recursive function is called to reduce the line and continue drawing until it reaches a minimum length. Pretty cool, right? 😊</p>
