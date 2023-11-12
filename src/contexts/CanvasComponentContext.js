@@ -172,7 +172,7 @@ const defaults = {
     {
       banner: "Adjust X Axis",
       id: "adjustCanvasX",
-      value: 1.4,
+      value: 1.39,
       increment: 0.1,
       min: 0,
       max: 3,
