@@ -3,6 +3,7 @@
 <img src="public\fern.jpg" alt="logo" width=900 height=400 />
 
 Image credit: [Deepak Nautiyal](https://unsplash.com/@deepaknautiyal) - [Unsplash](https://unsplash.com/)
+
 <br><br>
 
 <h1>Fractal Tree</h1>
@@ -85,6 +86,6 @@ npm start
 
 No License
 
-## :handshake: Contact
+<br><br>
 
 ## Leave a :star2:
