@@ -8,11 +8,13 @@ Image credit: [Deepak Nautiyal](https://unsplash.com/@deepaknautiyal) - [Unsplas
 
 <h1>Fractal Tree</h1>
 
-<p>This project was my introduction to React. It starts by drawing on an HTML canvas (centered at the bottom) based on parameters passed from components in sidebars. The line drawn will split when it reaches a certain length, and a recursive function is called to reduce the line and continue drawing until it reaches a minimum length. Pretty cool, right? 😊</p>
+<p>This project was my introduction to React. It starts by drawing on an HTML canvas (centered at the bottom) based on parameters passed from components in sidebars. The line drawn will split when it reaches an adjustable length, and a recursive function is called to reduce the line and continue drawing until it reaches a minimum length. Pretty cool, right? 😊</p>
 
 <h4> <a href="#">View Demo</a> <span> · </span> <a href="https://github.com/J-Saun/Fractal-Tree/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/J-Saun/Fractal-Tree/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/J-Saun/Fractal-Tree/issues"> Request Feature </a> </h4>
 
 </div>
+
+<br>
 
 ### :camera: Screenshots
 
